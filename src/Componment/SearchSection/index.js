@@ -7,6 +7,7 @@
 // within the handleClick function, we need to use setSearch DONE
 // Another function for enter key ( same functionality as click)
 // useEffect for each api (`https://imdb-api.com/en/API/SearchMovie/k_slpmf7ll/${search}`)
+import "./index.css";
 
 export default function SearchSection({ onChange, onClick }) {
   return (
@@ -18,7 +19,9 @@ export default function SearchSection({ onChange, onClick }) {
         onChange={onChange}
         // onSubmit={(e) => handleSubmit(e)}
       />
-      <button onClick={onClick}> Search </button>
+      <button className="searchButton" onClick={onClick}>
+        search
+      </button>
     </div>
   );
 }

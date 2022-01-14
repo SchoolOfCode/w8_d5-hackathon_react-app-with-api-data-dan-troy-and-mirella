@@ -1,0 +1,10 @@
+.searchButton {
+  background-color: #ff6f59;
+  color: white;
+  margin-left: 1em;
+}
+
+.searchButton:hover {
+  background-color: white;
+  color: #ff6f59;
+}
