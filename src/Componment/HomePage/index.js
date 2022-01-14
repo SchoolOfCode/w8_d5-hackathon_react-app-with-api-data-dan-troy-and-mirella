@@ -16,7 +16,7 @@ export default function HomePage() {
     getTopMovies();
   }, []);
 
-  const top5 = [...topMovies.slice(0, 10)];
+  const top5 = [...topMovies.slice(0, 14)];
   console.log(top5);
   return (
     <div className="filmContainer">

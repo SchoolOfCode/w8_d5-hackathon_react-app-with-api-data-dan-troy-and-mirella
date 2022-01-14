@@ -1,16 +1,18 @@
 .filmContainer {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .filmResult {
   height: 300px;
   width: 200px;
+  margin-bottom: 2em;
 }
 
 .filmImage {
-  height: 100px;
-  width: 75;
+  height: 13em;
+  width: 9em;
   object-fit: cover;
 }
 
