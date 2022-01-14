@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 //Components
 import SearchSection from "../SearchSection";
 import FilmList from "../FilmList";
+import HomePage from "../HomePage";
 
 function App() {
   // UseStates
@@ -69,6 +70,7 @@ function App() {
           })
         )}
       </div>
+      <HomePage />
     </div>
   );
 }
