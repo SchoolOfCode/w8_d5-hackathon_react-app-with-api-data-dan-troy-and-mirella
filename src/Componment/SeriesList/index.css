@@ -1,0 +1,11 @@
+.seriesImage {
+  height: 365px;
+  width: auto;
+  object-fit: cover;
+}
+
+.seriesContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}

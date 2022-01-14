@@ -3,13 +3,14 @@ import { useState, useEffect } from "react";
 //Components
 import SearchSection from "../SearchSection";
 import FilmList from "../FilmList";
+import SeriesList from "../SeriesList";
 
 function App() {
   // UseStates
   const [search, setSearch] = useState("");
   const [inputValue, setInputValue] = useState("");
   const [film, setFilm] = useState(false);
-  // const [series, setSeries] = useState("");
+  const [series, setSeries] = useState("");
 
   // Use Effect - FETCH FILMS
   useEffect(() => {
@@ -25,17 +26,17 @@ function App() {
   }, [search]);
 
   // Use Effect - FETCH TV SHOWS
-  // useEffect(() => {
-  //   async function getSeries() {
-  //     const response = await fetch(
-  //       `https://imdb-api.com/en/API/SearchSeries/k_slpmf7ll/${search}`
-  //     );
-  //     const data = await response.json();
-  //     console.log(" This is te tv data", data);
-  //     setSeries(data.results);
-  //   }
-  //   getSeries();
-  // }, [search]);
+  useEffect(() => {
+    async function getSeries() {
+      const response = await fetch(
+        `https://imdb-api.com/en/API/SearchSeries/k_slpmf7ll/${search}`
+      );
+      const data = await response.json();
+      console.log(" This is te tv data", data);
+      setSeries(data.results);
+    }
+    getSeries();
+  }, [search]);
 
   function handleChange(e) {
     setInputValue(e.target.value);
@@ -64,6 +65,21 @@ function App() {
                 filmTitle={item.title}
                 filmImage={item.image}
                 filmDescription={item.description}
+              />
+            );
+          })
+        )}
+      </div>
+      <div>
+        {!series ? (
+          <div className="hide">Fetching</div>
+        ) : (
+          series.map((item) => {
+            return (
+              <SeriesList
+                seriesTitle={item.title}
+                seriesImage={item.image}
+                seriesDescription={item.description}
               />
             );
           })
