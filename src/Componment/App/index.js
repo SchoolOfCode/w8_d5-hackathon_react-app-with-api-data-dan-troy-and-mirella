@@ -2,7 +2,6 @@ import "./index.css";
 import { useState, useEffect } from "react";
 //Components
 import SearchSection from "../SearchSection";
-import SearchResultsSection from "../SearchResultsSection";
 import FilmList from "../FilmList";
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [inputValue, setInputValue] = useState("");
   const [film, setFilm] = useState(false);
-  const [series, setSeries] = useState("");
+  // const [series, setSeries] = useState("");
 
   // Use Effect - FETCH FILMS
   useEffect(() => {
@@ -26,17 +25,17 @@ function App() {
   }, [search]);
 
   // Use Effect - FETCH TV SHOWS
-  useEffect(() => {
-    async function getSeries() {
-      const response = await fetch(
-        `https://imdb-api.com/en/API/SearchSeries/k_slpmf7ll/${search}`
-      );
-      const data = await response.json();
-      console.log(" This is te tv data", data);
-      setSeries(data.results);
-    }
-    getSeries();
-  }, [search]);
+  // useEffect(() => {
+  //   async function getSeries() {
+  //     const response = await fetch(
+  //       `https://imdb-api.com/en/API/SearchSeries/k_slpmf7ll/${search}`
+  //     );
+  //     const data = await response.json();
+  //     console.log(" This is te tv data", data);
+  //     setSeries(data.results);
+  //   }
+  //   getSeries();
+  // }, [search]);
 
   function handleChange(e) {
     setInputValue(e.target.value);

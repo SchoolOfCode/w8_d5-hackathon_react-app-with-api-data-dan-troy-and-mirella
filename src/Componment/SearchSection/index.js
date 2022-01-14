@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 // render the input box and the button DONE
 // const [search, setSearch] = useState("") DONE
 // Two function to handle the button and the input DONE
