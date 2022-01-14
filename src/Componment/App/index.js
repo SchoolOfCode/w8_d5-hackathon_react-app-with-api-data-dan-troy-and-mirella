@@ -3,7 +3,11 @@ import { useState, useEffect } from "react";
 //Components
 import SearchSection from "../SearchSection";
 import FilmList from "../FilmList";
+
+import HomePage from "../HomePage";
+
 import SeriesList from "../SeriesList";
+
 
 function App() {
   // UseStates
@@ -70,6 +74,9 @@ function App() {
           })
         )}
       </div>
+
+      <HomePage />
+
       <div>
         {!series ? (
           <div className="hide">Fetching</div>
@@ -85,6 +92,7 @@ function App() {
           })
         )}
       </div>
+
     </div>
   );
 }
