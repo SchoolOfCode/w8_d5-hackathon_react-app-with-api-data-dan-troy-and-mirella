@@ -15,7 +15,7 @@ export default function SearchSection({ onChange, onClick }) {
       <h1> IMDB FILM SEARCH</h1>
       <input
         type="text"
-        placeholder="Search for any films."
+        placeholder="Search for any film or series"
         onChange={onChange}
         // onSubmit={(e) => handleSubmit(e)}
       />

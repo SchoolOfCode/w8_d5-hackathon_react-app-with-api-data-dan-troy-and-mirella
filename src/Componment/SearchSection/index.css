@@ -8,3 +8,7 @@
   background-color: white;
   color: #ff6f59;
 }
+
+input {
+  width: 13em;
+}
