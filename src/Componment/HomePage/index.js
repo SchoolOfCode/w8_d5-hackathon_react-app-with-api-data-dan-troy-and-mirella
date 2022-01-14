@@ -22,8 +22,8 @@ export default function HomePage() {
     <div className="filmContainer">
       {top5.map(function (film) {
         return (
-          <div>
-            <img src={film.image} alt={film.title} />
+          <div className="filmResult">
+            <img className="filmImage" src={film.image} alt={film.title} />
             <p className="title">{film.fullTitle}</p>
             <p className="rating"> {film.imDbRating}</p>
           </div>

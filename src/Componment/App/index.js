@@ -8,7 +8,6 @@ import HomePage from "../HomePage";
 
 import SeriesList from "../SeriesList";
 
-
 function App() {
   // UseStates
   const [search, setSearch] = useState("");
@@ -20,7 +19,7 @@ function App() {
   useEffect(() => {
     async function getFilms() {
       const response = await fetch(
-        `https://imdb-api.com/en/API/SearchMovie/k_slpmf7ll/${search}`
+        `https://imdb-api.com/en/API/SearchMovie/k_y5g0i8z2/${search}`
       );
       const data = await response.json();
       console.log(data);
@@ -33,7 +32,7 @@ function App() {
   useEffect(() => {
     async function getSeries() {
       const response = await fetch(
-        `https://imdb-api.com/en/API/SearchSeries/k_slpmf7ll/${search}`
+        `https://imdb-api.com/en/API/SearchSeries/k_y5g0i8z2/${search}`
       );
       const data = await response.json();
       console.log(" This is te tv data", data);
@@ -92,7 +91,6 @@ function App() {
           })
         )}
       </div>
-
     </div>
   );
 }

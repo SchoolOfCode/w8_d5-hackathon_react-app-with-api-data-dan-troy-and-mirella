@@ -2,3 +2,19 @@
   display: flex;
   flex-direction: row;
 }
+
+.filmResult {
+  height: 300px;
+  width: 200px;
+}
+
+.filmImage {
+  height: 100px;
+  width: 75;
+  object-fit: cover;
+}
+
+/* img {
+  width: 100px;
+  height: 200px;
+} */
